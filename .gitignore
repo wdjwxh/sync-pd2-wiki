@@ -162,3 +162,4 @@ cython_debug/
 # 自定义忽略项
 last_sync_timestamp.txt
 wiki_sync_output/
+.env

@@ -14,9 +14,11 @@ import argparse
 from pathlib import Path
 from datetime import datetime
 import requests
+from dotenv import load_dotenv
 
 # ==================== 配置区 ====================
-WIKI_API_URL = "https://wiki.projectdiablo2.com/w/api.php"   # ← 改成你的国外 wiki
+load_dotenv()
+WIKI_API_URL = os.getenv("WIKI_API_URL")   # 从.env文件加载
 OUTPUT_DIR = Path("wiki_sync_output")
 OUTPUT_DIR.mkdir(exist_ok=True)
 
